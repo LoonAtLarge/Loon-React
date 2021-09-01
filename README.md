@@ -1,2 +1,2 @@
 # Loon-React
- learning React for web dev
+ Learning React via Udemy
