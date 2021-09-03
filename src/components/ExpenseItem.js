@@ -1,6 +1,7 @@
 import React from 'react';
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
+import Card from './Card';
 
 
 //Passing Data via Props
@@ -15,7 +16,9 @@ function ExpenseItem(purchaseData) {
 
   //nesting divs allows us to output multiple lines of text without causing errors
   return (//we use className instead of class to assign styling because this is still within jsx and class is a reserved keyword in javascript
-    <div className="expense-item"> 
+
+    //replacing <div> with <Card> here after using props.children in the Card component applies the styling to the entire contents of the div ON TOP of the styling that the component already has. This effectively makes is work like a built in html wrapper component
+    <Card className="expense-item"> 
 
       <ExpenseDate date={purchaseData.date}/> {/*This is a component that we imported from another file. Elements that don't require any content can be written as self-closing tags*/}
       
@@ -23,7 +26,7 @@ function ExpenseItem(purchaseData) {
         <h2>{purchaseData.title /*jsx allows you to run basic javascript within the html (only works inside the curly braces)*/}</h2> 
         <div className="expense-item__price">${purchaseData.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 

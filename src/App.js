@@ -1,6 +1,6 @@
 //App.js is our root component and all other components will be nested within App.js
 //Components should always return jsx code containing the html code that will be rendered by React
-//comments within jsx must be contained within {/* and */}
+//comments within jsx must be contained within {/* and */} and it must be within the html portion of the code
 
 import React from 'react';
 //import ExpenseItem from './components/ExpenseItem';
