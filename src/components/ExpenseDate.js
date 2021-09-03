@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 import './ExpenseDate.css';
 
+//this component recieves the date from the parent component as props and displays it
 function ExpenseDate(purchaseData){
 
-var expenseDate = new Date(purchaseData.date); //store the date prop in a new Date object because otherwise the getFullYear method won't work and will crash the page
+var expenseDate = new Date(purchaseData.date); //store the date prop in a new Date object because otherwise the call to the getFullYear method won't work and will crash the page
 
 // toLocaleString() is a built-in function that allows date objects to be parsed and output in a readable format 
 //documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
