@@ -1,7 +1,7 @@
 import React from 'react';
 import './ExpenseItem.css';
-import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import ExpenseDate from './ExpenseDate.js';
+import Card from '../UI/Card';//this import statement uses two dots to go up a directory in order to access the UI folder
 
 
 //Passing Data via Props

@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
-import Card from './Card';
+import Card from '../UI/Card';//this import statement uses two dots to go up a directory in order to access the UI folder
 
 //this component recieves expense data as props and displays it using the ExpenseItem component
 function Expenses(props) {
