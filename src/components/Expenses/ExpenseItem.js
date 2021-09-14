@@ -14,6 +14,11 @@ function ExpenseItem(purchaseData) {
   The ExpenseItem component should be configurable from outside of the component
   Data should NOT be stored in the component itself, but instead passed in as props */
 
+  //defining a function to be passed to the onClick event handler
+  const onClickHandler = () => {
+    console.log('Clicked');
+  }
+
   //nesting divs allows us to output multiple lines of text without causing errors
   return (//we use className instead of class to assign styling because this is still within jsx and class is a reserved keyword in javascript
 
@@ -26,6 +31,9 @@ function ExpenseItem(purchaseData) {
         <h2>{purchaseData.title /*jsx allows you to run basic javascript within the html (only works inside the curly braces)*/}</h2> 
         <div className="expense-item__price">${purchaseData.amount}</div>
       </div>
+      {/*placeholder button for demoing changes and States*/}
+      <button onClick={onClickHandler} >Change Title</button>{/*in React, events begin with "on" and Event listeners are added inside of the tags instead of at the beginning of the code like it'd be done usually in JS. The Event listeners take a function as an argument so that the code within the function is executed when the Event occurs.
+      Make sure to only use the function name without parentheses otherwise the function will execute when the jsx code is returned (which would be too early) and not when the Event is reached. */}
     </Card>
   );
 }

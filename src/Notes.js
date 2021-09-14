@@ -51,8 +51,20 @@
 
     when importing a file you can use ./ to indicate that the file being imported is within the same directory as the file you are currently in. each '.' you add is another directory up from the current directory.
     Example:
-    import './ExpenseItem.css';
-    import Card from '../UI/Card';
-    import Filename from '.../src/Filename';
+                import './ExpenseItem.css';
+                import Card from '../UI/Card';
+                import Filename from '.../src/Filename';
+
+    Components can also be written using arrow function syntax. Right now it serves no benefit so it's up to personal preference
+    Learn more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+    Example:
+                const Card = (props) => {
+
+                const classes = 'card ' + props.className;
+                return <div className= {classes} > {props.children} </div>;
+
+                }
+
+    .
 
 */
