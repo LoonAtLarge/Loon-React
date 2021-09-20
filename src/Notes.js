@@ -65,6 +65,9 @@
 
                 }
 
-    .
+    
+
+    React works by treating each component as a funtion and executing the code within that function whenever it is rendered. If a component calls another component, React is made aware of that component's existence and will call it whenever it is rendered. React will repeat this process until there are no more components to render.
+    The problem with this is that it's not very efficient. React is designed to be efficient and will only render the components that are needed to display the current state of the application. In short, React will render only once. To deal with this, we must use Events and States. Events will trigger a re-render of the components and the page will be updated to match the current state of the application.
 
 */
