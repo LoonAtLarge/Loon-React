@@ -19,8 +19,8 @@ function ExpenseItem(purchaseData) {
 //useState is a React hook, React hooks start with "use" and must be called within the component function. They should NOT be called outside a component or within a function nested within the component.
 //this statement uses array destructuring, a javascript concept that creates an array with any number of variables as elements on the left side of the expression. These variables store the element of the array on the right side of the expression that share the same index.
   const [title, setTitle] = useState(purchaseData.title); //this is a hook that allows us to define a state variable, and set it to a value.
-  //the useState funtion returns an array with two elements, the first element is the state variable, and the second element is a function that allows us to update the state variable.
-
+//the useState funtion returns an array with two elements, the first element is the state variable, and the second element is a function that allows us to update the state variable.
+//The State variable that is created via useState is unique for each instance of the component, so updates to the state variable will only effect the component instance in which it is updated. In this case whereever the Change Title button is clicked, the state variable will be updated which will update the Title. Even though it looks like the entire page is being refreshed React will only update the component that has the state variable that is being updated.
   
 
   //defining a function to be passed to the onClick event handler
