@@ -5,6 +5,7 @@
 import React from 'react';
 //import ExpenseItem from './components/ExpenseItem';
 import Expenses from './components/Expenses/Expenses.js';
+import NewExpense from './components/NewExpense/NewExpense.js';
 
 function App() {
 
@@ -18,10 +19,7 @@ function App() {
   return (
     //this is html syntax and wouldn't normally work here in a javascript file
     <div>
-      <h2>Loon's Game Expense Tracker</h2>
-      <p>It is safer to assume that I am exhausted at all times</p>
-      
-
+      <NewExpense/>   
       {/*Elements that don't require any content can be written as self-closing tags (completely optional)*/}
       <Expenses expenses={expenses}/>
     </div>
